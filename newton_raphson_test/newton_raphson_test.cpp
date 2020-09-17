@@ -55,7 +55,7 @@ int main() {
 	float solf = 0.f;
 	double sol = 0.;
 
-	std::cout << "\n  Testing \"bisection\" -->\n";
+	std::cout << "\n  Testing \"newton_raphson\" -->\n";
 	std::cout << "  Solving 2*x^2 - 5*x + 1 == 0 \n";
 	solf = newtonRaphsonf(0.5f, quadf, dquadf);
 	std::cout << "   Float 1 :: " << solf << ", f(sol) = " << quadf(solf) << "\n";
