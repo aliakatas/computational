@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "computational_physics", "co
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "detect_machine_precision", "..\detect_machine_precision\detect_machine_precision.vcxproj", "{91B8E2C3-3691-4B6F-A435-D8BED881773F}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test_detect_machine_precision", "..\test_detect_machine_precision\test_detect_machine_precision.vcxproj", "{722AD45A-ED5B-488A-95AE-52EA885BF182}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{91B8E2C3-3691-4B6F-A435-D8BED881773F}.Release|x64.Build.0 = Release|x64
 		{91B8E2C3-3691-4B6F-A435-D8BED881773F}.Release|x86.ActiveCfg = Release|Win32
 		{91B8E2C3-3691-4B6F-A435-D8BED881773F}.Release|x86.Build.0 = Release|Win32
+		{722AD45A-ED5B-488A-95AE-52EA885BF182}.Debug|x64.ActiveCfg = Debug|x64
+		{722AD45A-ED5B-488A-95AE-52EA885BF182}.Debug|x64.Build.0 = Debug|x64
+		{722AD45A-ED5B-488A-95AE-52EA885BF182}.Debug|x86.ActiveCfg = Debug|Win32
+		{722AD45A-ED5B-488A-95AE-52EA885BF182}.Debug|x86.Build.0 = Debug|Win32
+		{722AD45A-ED5B-488A-95AE-52EA885BF182}.Release|x64.ActiveCfg = Release|x64
+		{722AD45A-ED5B-488A-95AE-52EA885BF182}.Release|x64.Build.0 = Release|x64
+		{722AD45A-ED5B-488A-95AE-52EA885BF182}.Release|x86.ActiveCfg = Release|Win32
+		{722AD45A-ED5B-488A-95AE-52EA885BF182}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
