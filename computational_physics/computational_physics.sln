@@ -23,6 +23,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "secant_test", "..\secant_te
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "fixed_point", "..\fixed_point\fixed_point.vcxproj", "{B4DB4699-CD11-4F3E-AAA0-B2EE8747ECBE}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "utilities", "..\utilities\utilities.vcxproj", "{85D3B6B8-F6E0-49BB-9E25-BF8D1FBBD7C2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -111,6 +113,14 @@ Global
 		{B4DB4699-CD11-4F3E-AAA0-B2EE8747ECBE}.Release|x64.Build.0 = Release|x64
 		{B4DB4699-CD11-4F3E-AAA0-B2EE8747ECBE}.Release|x86.ActiveCfg = Release|Win32
 		{B4DB4699-CD11-4F3E-AAA0-B2EE8747ECBE}.Release|x86.Build.0 = Release|Win32
+		{85D3B6B8-F6E0-49BB-9E25-BF8D1FBBD7C2}.Debug|x64.ActiveCfg = Debug|x64
+		{85D3B6B8-F6E0-49BB-9E25-BF8D1FBBD7C2}.Debug|x64.Build.0 = Debug|x64
+		{85D3B6B8-F6E0-49BB-9E25-BF8D1FBBD7C2}.Debug|x86.ActiveCfg = Debug|Win32
+		{85D3B6B8-F6E0-49BB-9E25-BF8D1FBBD7C2}.Debug|x86.Build.0 = Debug|Win32
+		{85D3B6B8-F6E0-49BB-9E25-BF8D1FBBD7C2}.Release|x64.ActiveCfg = Release|x64
+		{85D3B6B8-F6E0-49BB-9E25-BF8D1FBBD7C2}.Release|x64.Build.0 = Release|x64
+		{85D3B6B8-F6E0-49BB-9E25-BF8D1FBBD7C2}.Release|x86.ActiveCfg = Release|Win32
+		{85D3B6B8-F6E0-49BB-9E25-BF8D1FBBD7C2}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
