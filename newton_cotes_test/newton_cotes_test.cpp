@@ -3,13 +3,22 @@
 #include <iostream>
 #include <cmath>
 
+float polyf(float x) {
+	return 0.5f * pow(x, 4) + 6.f * x * x - 3.8f * x + 4.2f;
+}
+
+double polyd(double x) {
+	return 0.5 * pow(x, 4) + 6. * x * x - 3.8 * x + 4.2;
+}
+
 int main() {
 	
 	std::cout << "\n  Testing \"newton_cotes\" -->\n";
 	std::cout << " ********************** \n";
-	/*std::cout << " F :: log(1, 10) = " << logarithmf(1.f) << "  (exp: 0.0)\n";
-	std::cout << " D :: log(1, 10) = " << logarithmd(1.) << "  (exp: 0.0)\n";
-	std::cout << " F :: log(e, e) = " << logarithmf(M_E, M_E) << "  (exp: 1.0)\n";
+	std::cout << "  Int_{-3, 3} 0.5 * x^4 + 6 * x^2 - 3.8 * x + 4.2  \n";
+	std::cout << " F ::  " << newton_cotesf(-3.f, 3.f, 50, polyf) << "  (exact: 181.8)\n";
+	std::cout << " D ::  " << newton_cotesd(-3., 3., 50, polyd) << "  (exact: 181.8)\n";
+	/*std::cout << " F :: log(e, e) = " << logarithmf(M_E, M_E) << "  (exp: 1.0)\n";
 	std::cout << " D :: log(e, e) = " << logarithmd(M_E, M_E) << "  (exp: 1.0)\n";
 	std::cout << " F :: log(98, 22) = " << logarithmf(98.f, 22.f) << "  (exp: 1.483307832)\n";
 	std::cout << " D :: log(98, 22) = " << logarithmd(98., 22.) << "  (exp: 1.483307832)\n";
