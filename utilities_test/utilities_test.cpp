@@ -4,9 +4,7 @@
 #include <cmath>
 
 int main() {
-	float solf = 0.f;
-	double sol = 0.;
-
+	
 	std::cout << "\n  Testing \"utilities\" -->\n";
 	std::cout << " ********************** \n";
 	std::cout << " F :: log(1, 10) = " << logarithmf(1.f) << "  (exp: 0.0)\n";
