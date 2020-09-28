@@ -24,6 +24,13 @@ int main() {
 	std::cout << " Fibonacci(-5) = " << fibonacci(-5) << "  (exp: -5)\n";
 	std::cout << " Fibonacci(100) = " << fibonacci(71) << "  (exp: 308061521170129)\n";
 	std::cout << " ********************** \n";
+	std::cout << " GCD(11, 3) = " << gcd(11, 3) << "  (exp: 1)\n";
+	std::cout << " GCD(25, 5) = " << gcd(25, 5) << "  (exp: 5)\n";
+	std::cout << " GCD(69, 23) = " << gcd(69, 23) << "  (exp: 23)\n";
+	std::cout << " GCD(9, 4) = " << gcd(9, 4) << "  (exp: 1)\n";
+	std::cout << " GCD(1234, 87) = " << gcd(1234, 87) << "  (exp: 1)\n";
+	std::cout << " GCD(7539, 36) = " << gcd(7539, 36) << "  (exp: 3)\n";
+	std::cout << " ********************** \n";
 
 	std::cout << "  <-- Done. \n";
 }
