@@ -31,6 +31,14 @@ int main() {
 	std::cout << " GCD(1234, 87) = " << gcd(1234, 87) << "  (exp: 1)\n";
 	std::cout << " GCD(7539, 36) = " << gcd(7539, 36) << "  (exp: 3)\n";
 	std::cout << " ********************** \n";
-
+	std::cout << " Is -5 prime? " << isPrime(-5) << "\n";
+	std::cout << " Is 0 prime? " << isPrime(0) << "\n";
+	std::cout << " Is 1 prime? " << isPrime(1) << "\n";
+	std::cout << " Is 2 prime? " << isPrime(2) << "\n";
+	std::cout << " Is 7 prime? " << isPrime(7) << "\n";
+	std::cout << " Is 15 prime? " << isPrime(15) << "\n";
+	std::cout << " Is 2971 prime? " << isPrime(2971) << " (it is...)\n";
+	std::cout << " Is 3001 prime? " << isPrime(3001) << " (it is...)\n";
+	std::cout << " Is 6858 prime? " << isPrime(6858) << "\n";
 	std::cout << "  <-- Done. \n";
 }

@@ -1,5 +1,7 @@
 #include "utilities.h"
 #include <cmath>
+#include <stdlib.h>
+#include <time.h>
 
 float logarithmf(float x, float base) {
 	return log10f(x) / log10f(base);
@@ -31,4 +33,21 @@ long long int gcd(long long int a, long long int b) {
 	if (b == 0)
 		return a;
 	return gcd(b, a % b);
+}
+
+long long int randomInRange(long long int s, long long int e) {
+	return s + (rand() % static_cast<long long>(e - s + 1));
+}
+
+bool isPrime(long long int n, const float selection) {
+	if (n < 2)
+		return false;
+	if (n == 2)
+		return true;
+
+	for (auto i = 2; i < sqrt(n); ++i) {
+		if (!(n % i))
+			return false;
+	}
+	return true;
 }
