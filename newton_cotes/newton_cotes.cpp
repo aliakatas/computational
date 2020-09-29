@@ -35,7 +35,7 @@ double newton_cotes38d(double first, double last, int npoints, double (*f)(doubl
 	double integral = 0.;
 
 	for (auto i = 0; i < npoints - 2; i += 3)
-		integral += f(first + i * h) + 3.f * f(first + (i + 1) * h) + 3.f * f(first + (i + 2) * h) + f(first + (i + 3) * h);
+		integral += f(first + i * h) + 3. * f(first + (i + 1) * h) + 3. * f(first + (i + 2) * h) + f(first + (i + 3) * h);
 
 	return 3. * h * integral / 8.;
 }
