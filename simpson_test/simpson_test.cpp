@@ -19,6 +19,15 @@ double trigon(double x) {
 	return cos(x / 2.) - 3. * x;
 }
 
+float trigon2(float x) {
+	return cos(4.f * x / 3.f) * sin(x) - 3.f * x * x + 1.f / x;;
+}
+
+double trigon2(double x) {
+	return cos(4. * x / 3.) * sin(x) - 3. * x * x + 1. / x;;
+}
+
+
 int main() {
 
 	std::cout << "\n  Testing \"simpson\" -->\n";
@@ -30,6 +39,10 @@ int main() {
 	std::cout << "  Int_{-pi, pi} cos(x/2) - 3 * x  (50 segments) \n";
 	std::cout << " F ::  " << simpsonf(-M_PI, M_PI, 50, trigon) << "  (exact: 4.0)\n";
 	std::cout << " D ::  " << simpsond(-M_PI, M_PI, 50, trigon) << "  (exact: 4.0)\n";
+	std::cout << " ********************** \n";
+	std::cout << "  Int_{3pi/4, pi} cos(4 * x / 3) * sin(x) - 3 * x^2 + 1 / x  (50 segments) \n";
+	std::cout << " F ::  " << simpsonf(3.f * M_PI / 4.f, M_PI, 50, trigon2) << "  (exact: -17.90410178...)\n";
+	std::cout << " D ::  " << simpsond(3. * M_PI / 4., M_PI, 50, trigon2) << "  (exact: -17.90410178...)\n";
 	std::cout << " ********************** \n";
 
 	std::cout << "  <-- Done. \n";
