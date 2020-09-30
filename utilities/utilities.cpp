@@ -51,3 +51,19 @@ bool isPrime(long long int n, const float selection) {
 	}
 	return true;
 }
+
+bool differenceBelowThreshold(float* ref, float* value, int n, float threshold) {
+	for (auto i = 0; i < n; ++i) {
+		if (fabsf(ref[i] - value[i]) >= threshold)
+			return false;
+	}
+	return true;
+}
+
+bool differenceBelowThreshold(double* ref, double* value, int n, double threshold) {
+	for (auto i = 0; i < n; ++i) {
+		if (fabs(ref[i] - value[i]) >= threshold)
+			return false;
+	}
+	return true;
+}
