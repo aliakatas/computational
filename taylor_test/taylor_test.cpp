@@ -12,6 +12,10 @@ double y1d(double t, double y) {
 	return -1. * y;
 }
 
+double exactSolution(double t) {
+	return pow(M_E, -t);
+}
+
 int main() {
 
 	std::cout << "\n  Testing \"taylor\" -->\n";
@@ -32,8 +36,8 @@ int main() {
 		yf += dt * y1f(t, yf);
 		yd += dt * y1d(t, yd);
 
-		float exactf = pow(M_E, -t);
-		double exactd = pow(M_E, -t);
+		float exactf = exactSolution(t);
+		double exactd = exactSolution(t);
 
 		if (!differenceBelowThreshold(&exactf, &yf, 1, tolerance)) {
 			std::cout << " Difference beyond tolerance level detected (float) at t = " << t << "\n";
