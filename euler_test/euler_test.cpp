@@ -1,6 +1,6 @@
 #define _USE_MATH_DEFINES
 #include "utilities.h"
-#include "taylor.h"
+#include "euler.h"
 #include <iostream>
 #include <cmath>
 
@@ -18,7 +18,7 @@ double exactSolution(double t) {
 
 int main() {
 
-	std::cout << "\n  Testing \"taylor\" -->\n";
+	std::cout << "\n  Testing \"euler\" -->\n";
 	std::cout << " ********************** \n";
 	std::cout << " Solving y'(t) = -y(t), with t in [0,3], y(0) = 1 \n";
 	std::cout << " Exact solution :: y(t) = e^(-t) \n";
@@ -30,15 +30,15 @@ int main() {
 	double t = 0.;
 
 	bool errorOccurred = false;
-	double tolerance = 0.02;
+	double tolerance = 0.005;
 	std::cout << " Tolerance :: tol = " << tolerance << "\n";
 	int iter = 0;
 	while (t <= 3.) {
 		++iter;
 		float tf = t;
-		taylorf(0.f, iter, dt, tf, yf, y1f);
-		taylord(0., iter, dt, t, yd, y1d);
-
+		eulerf(0.f, iter, dt, tf, yf, y1f);
+		eulerd(0., iter, dt, t, yd, y1d);
+		
 		float exactf = exactSolution(t);
 		double exactd = exactSolution(t);
 
