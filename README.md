@@ -14,6 +14,9 @@ Unless stated otherwise, the following methods consider univariate functions onl
 - Runge-Kutta (4th order)
 - Adams-Bashforth
 
+### Linear Systems
+- Jacobi
+
 ### Root Finding methods:
 - Bisection
 - Fixed Point
