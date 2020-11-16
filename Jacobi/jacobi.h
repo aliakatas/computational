@@ -1,6 +1,6 @@
 #pragma once
 
-#define TOLERANCE 0.000001
+#define TOLERANCE 0.00001
 #define MAXITERATIONS 100
 
 
@@ -12,9 +12,9 @@ bool isDiagonallyDominant_f(const float* A, size_t N);
 
 bool isDiagonallyDominant_d(const double* A, size_t N);
 
-void jacobi_f(const float* A, const float* x, const float* b, size_t N, float tol = TOLERANCE, size_t max_iter = MAXITERATIONS);
+int jacobi_f(const float* A, float* x, const float* b, size_t N, float tol = TOLERANCE, size_t max_iter = MAXITERATIONS);
 
-void jacobi_d(const double* A, const double* x, const double* b, size_t N, double tol = TOLERANCE, size_t max_iter = MAXITERATIONS);
+int jacobi_d(const double* A, double* x, const double* b, size_t N, double tol = TOLERANCE, size_t max_iter = MAXITERATIONS);
 
 
 

@@ -1,5 +1,6 @@
 #include "jacobi.h"
 #include <cmath>
+#include <cstring>
 
 bool hasConverged_f(const float* xnew, const float* xold, size_t N, float tol) {
 	for (auto idx = 0; idx < N; ++idx) {
@@ -53,10 +54,66 @@ bool isDiagonallyDominant_d(const double* A, size_t N) {
 	return true;
 }
 
-void jacobi_f(const float* A, const float* x, const float* b, size_t N, float tol, size_t max_iter) {
+int jacobi_f(const float* A, float* x, const float* b, size_t N, float tol, size_t max_iter) {
+	float* xold = (float*)malloc(N * sizeof(float));
+	if (!xold)
+		return -1;
 
+	memcpy(xold, x, N * sizeof(float));
+	
+	float s = 0.f;
+	size_t iter = 0;
+	while (iter < max_iter) {
+		for (auto row = 0; row < N; ++row) {
+			s = 0.f;
+			for (auto col = 0; col < N; ++col) {
+				if (row != col)
+					s += A[row * N + col] * xold[col];
+			}
+			x[row] = (1.f / A[row * N + row]) * (b[row] - s);
+		}
+
+		if (hasConverged_f(x, xold, N, tol))
+			break;
+
+		memcpy(xold, x, N * sizeof(float));
+		++iter;
+	}
+
+	free(xold);
+	if (iter >= max_iter)
+		return 1;
+	return 0;
 }
 
-void jacobi_d(const double* A, const double* x, const double* b, size_t N, double tol, size_t max_iter) {
+int jacobi_d(const double* A, double* x, const double* b, size_t N, double tol, size_t max_iter) {
+	double* xold = (double*)malloc(N * sizeof(double));
+	if (!xold)
+		return -1;
 
+	memcpy(xold, x, N * sizeof(double));
+
+	double s = 0.;
+	size_t iter = 0;
+	while (iter < max_iter) {
+		for (auto row = 0; row < N; ++row) {
+			s = 0.f;
+			for (auto col = 0; col < N; ++col) {
+				if (row != col)
+					s += A[row * N + col] * xold[col];
+			}
+			x[row] = (1.f / A[row * N + row]) * (b[row] - s);
+		}
+
+		if (hasConverged_d(x, xold, N, tol))
+			break;
+
+		memcpy(xold, x, N * sizeof(double));
+		++iter;
+	}
+
+	free(xold);
+	if (iter >= max_iter)
+		return 1;
+	return 0;
 }
